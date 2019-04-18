@@ -79,7 +79,7 @@ class Hue2Influx:
                 if state_key == 'lastupdated':
                     continue
                 elif state_key == 'temperature':
-                    state_value = state_value / 10
+                    state_value = state_value / 100
 
                 measurement['fields'][state_key] = state_value
 
