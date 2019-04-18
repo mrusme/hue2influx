@@ -1,6 +1,8 @@
 hue2influx
 ----------
 
+[![Docker Hub](https://img.shields.io/docker/cloud/build/mrusme/hue2influx.svg?style=popout-square)](https://hub.docker.com/r/mrusme/hue2influx)
+
 Sync Philips Hue component states to InfluxDB.
 
 ## Environment variables
