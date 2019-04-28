@@ -42,8 +42,11 @@ class Hue2Influx:
     def run(self):
         print("hue2influx running ...")
         while True:
-            self.sync_sensors()
-            self.sync_lights()
+            if self.sync_sensors() == False:
+                print("Error writing sensor points!")
+            if self.sync_lights() == False:
+                print("Error writing light points!")
+            print('.', end='', flush=True)
             time.sleep(60)
 
     def _get_sensors(self):
