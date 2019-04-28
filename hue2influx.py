@@ -81,7 +81,7 @@ class Hue2Influx:
                 if state_key == 'lastupdated':
                     continue
                 elif state_key == 'temperature':
-                    state_value = state_value / 100
+                    measurement['fields'][state_key] = state_value / 100
                 elif type(state_value) is dict:
                     measurement['fields'].update(self._flatten_dict(state_key, state_value))
                 elif type(state_value) is list:
